@@ -1,0 +1,17 @@
+{
+    "main":{
+        "auth":"/auth",
+        "template":"/template"
+    },
+    "routes":{
+        "auth":{
+            "generateAccessToken":"/access_token"
+        },
+        "template":{
+            "getTemplates":"/:shop",
+            "createTemplate":"/create",
+            "updateTemplate":"/update/:id",
+            "deleteTemplate":"/delete/:id"
+        }
+    }
+}
