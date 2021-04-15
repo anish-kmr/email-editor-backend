@@ -2,6 +2,11 @@ const axios = require('axios');
 
 exports.generateAccessToken = async (req,res) => {
     const {client_id, client_secret, code, shop } = req.body;
+    if (!client_id || !client_secret || !code || !shop) {
+        return res.status(422).json({
+          error: "Mandatory fields in request body unprocessable",
+        });
+    }
     let payload = {client_id,client_secret,code}
     let response = {}
     try{

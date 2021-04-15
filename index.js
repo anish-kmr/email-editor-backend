@@ -6,6 +6,8 @@ const templateRoutes = require('./routes/template.routes')
 const authRoutes = require('./routes/auth.routes')
 const { main } = require('./routes/routes.json');
 
+
+
 const app = express();
 
 //middlewares
